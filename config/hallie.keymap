@@ -38,110 +38,129 @@
 
 / {
     macros {
-        tab_right: tab_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(TAB)>;
-            label = "TAB_RIGHT";
-        };
 
-        tab_left: tab_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LS(TAB))>;
-            label = "TAB_LEFT";
-        };
+    /* --- existing --- */
+    tab_right: tab_right {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(TAB)>;
+        label = "TAB_RIGHT";
+    };
 
-        tmux_h: tmux_h {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp H>;
-            label = "TMUX_H";
-        };
+    tab_left: tab_left {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(LS(TAB))>;
+        label = "TAB_LEFT";
+    };
 
-        tmux_j: tmux_j {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp J>;
-            label = "TMUX_J";
-        };
+    /* --- tmux default-friendly --- */
 
-        tmux_k: tmux_k {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp K>;
-            label = "TMUX_K";
-        };
+    tmux_left: tmux_left {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp LEFT_ARROW>;
+        label = "TMUX_PANE_LEFT";
+    };
 
-        tmux_l: tmux_l {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp L>;
-            label = "TMUX_L";
-        };
+    tmux_down: tmux_down {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp DOWN_ARROW>;
+        label = "TMUX_PANE_DOWN";
+    };
 
-        tmux_v: tmux_v {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp V>;
-            label = "TMUX_SPLIT_H";
-        };
+    tmux_up: tmux_up {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp UP_ARROW>;
+        label = "TMUX_PANE_UP";
+    };
 
-        tmux_s: tmux_s {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp S>;
-            label = "TMUX_SPLIT_V";
-        };
+    tmux_right: tmux_right {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp RIGHT_ARROW>;
+        label = "TMUX_PANE_RIGHT";
+    };
 
-        tmux_n: tmux_n {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp N>;
-            label = "TMUX_NEXT_WIN";
-        };
+    /* split: default tmux uses % and " */
+    tmux_split_h: tmux_split_h {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp PERCENT>;      /* % => split-window -h */
+        label = "TMUX_SPLIT_H";
+    };
 
-        tmux_p: tmux_p {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp P>;
-            label = "TMUX_PREV_WIN";
-        };
+    tmux_split_v: tmux_split_v {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp LS(SQT)>;      /* " => split-window -v */
+        label = "TMUX_SPLIT_V";
+    };
 
-        tmux_z: tmux_z {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp Z>;
-            label = "TMUX_ZOOM";
-        };
+    tmux_new_win: tmux_new_win {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp C>;
+        label = "TMUX_NEW_WIN";
+    };
 
-        tmux_x: tmux_x {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp X>;
-            label = "TMUX_KILL";
-        };
+    tmux_next_win: tmux_next_win {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp N>;
+        label = "TMUX_NEXT_WIN";
+    };
 
-        tmux_c: tmux_c {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp C>;
-            label = "TMUX_NEW_WIN";
-        };
+    tmux_prev_win: tmux_prev_win {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp P>;
+        label = "TMUX_PREV_WIN";
+    };
 
-        tmux_r: tmux_r {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp R>;
-            label = "TMUX_RENAME";
-        };
+    tmux_kill_pane: tmux_kill_pane {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp X>;
+        label = "TMUX_KILL_PANE";
+    };
 
-        tmux_d: tmux_d {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp D>;
-            label = "TMUX_DETACH";
-        };
+    tmux_zoom: tmux_zoom {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp Z>;
+        label = "TMUX_ZOOM";
+    };
+
+    tmux_detach: tmux_detach {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp D>;
+        label = "TMUX_DETACH";
+    };
+
+    tmux_rename: tmux_rename {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp COMMA>;        /* prefix + , */
+        label = "TMUX_RENAME";
+    };
+
+    tmux_copy: tmux_copy {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp LEFT_BRACKET>; /* prefix + [ */
+        label = "TMUX_COPYMODE";
+    };
+
+    tmux_paste: tmux_paste {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp RIGHT_BRACKET>; /* prefix + ] */
+        label = "TMUX_PASTE";
+    };
         tmux_win_1: tmux_win_1 {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
