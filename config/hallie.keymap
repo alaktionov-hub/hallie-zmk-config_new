@@ -256,10 +256,10 @@
 
         tmux {
             bindings = <
-&trans  &trans  &trans   &trans   &trans   &trans    &trans   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans   &trans   &trans   &trans    &tmux_h  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &tmux_x  &tmux_c  &tmux_v  &trans    &trans   &trans  &trans  &trans  &trans  &trans
-                         &trans   &trans   &trans    &trans   &trans  &trans
+&trans  &trans  &trans   &trans   &trans   &trans    &trans   &trans   &trans  &trans  &trans  &trans
+&trans  &trans  &trans   &trans   &trans   &trans    &tmux_h  &tmux_j  &trans  &trans  &trans  &trans
+&trans  &trans  &tmux_x  &tmux_c  &tmux_v  &trans    &trans   &trans   &trans  &trans  &trans  &trans
+                         &trans   &trans   &trans    &trans   &trans   &trans
             >;
         };
     };
