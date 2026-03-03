@@ -325,10 +325,10 @@
 
         tmux {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans   &trans   &trans   &trans   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &tmux_h  &tmux_j  &tmux_k  &tmux_l  &trans  &trans
-&trans  &trans  &none   &none   &none   &trans    &trans   &trans   &trans   &trans   &trans  &trans
-                        &trans  &trans  &trans    &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &none   &none   &none   &none   &trans  &trans
+&trans  &trans  &none   &none   &none   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
