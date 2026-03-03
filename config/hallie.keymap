@@ -142,6 +142,75 @@
             bindings = <&kp LC(B) &kp D>;
             label = "TMUX_DETACH";
         };
+        tmux_win_1: tmux_win_1 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp N1>;
+        label = "TMUX_WIN_1";
+    };
+
+    tmux_win_2: tmux_win_2 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp N2>;
+        label = "TMUX_WIN_2";
+    };
+
+    tmux_win_3: tmux_win_3 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp N3>;
+        label = "TMUX_WIN_3";
+    };
+
+    tmux_win_4: tmux_win_4 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp N4>;
+        label = "TMUX_WIN_4";
+    };
+
+    tmux_win_5: tmux_win_5 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp N5>;
+        label = "TMUX_WIN_5";
+    };
+
+    tmux_win_6: tmux_win_6 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp N6>;
+        label = "TMUX_WIN_6";
+    };
+
+    tmux_win_7: tmux_win_7 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp N7>;
+        label = "TMUX_WIN_7";
+    };
+
+    tmux_win_8: tmux_win_8 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp N8>;
+        label = "TMUX_WIN_8";
+    };
+
+    tmux_win_9: tmux_win_9 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp N9>;
+        label = "TMUX_WIN_9";
+    };
+
+    tmux_win_0: tmux_win_0 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings = <&kp LC(B) &kp N0>;
+        label = "TMUX_WIN_0";
+    };
     };
 
     behaviors {
