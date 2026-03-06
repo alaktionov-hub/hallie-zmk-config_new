@@ -218,6 +218,20 @@
             bindings = <&kp LC(B) &kp N0>;
             label = "TMUX_WIN_0";
         };
+
+        tmux_past: tmux_past {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp RIGHT_BRACKET>;
+            label = "TMUX_PAST";
+        };
+
+        tmux_copy: tmux_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp LEFT_BRACKET>;
+            label = "TMUX_COPY";
+        };
     };
 
     behaviors {
@@ -268,7 +282,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TMUX_PAST_VERTICAL";
             #binding-cells = <0>;
-            bindings = <&tmux_paste>, <&tmux_split_v>;
+            bindings = <&tmux_past>, <&tmux_split_v>;
         };
     };
 
