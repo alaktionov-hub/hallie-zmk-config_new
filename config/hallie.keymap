@@ -149,20 +149,6 @@
             label = "TMUX_RENAME";
         };
 
-        tmux_copy: tmux_copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp LEFT_BRACKET>; /* prefix + [ */
-            label = "TMUX_COPYMODE";
-        };
-
-        tmux_paste: tmux_paste {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp RIGHT_BRACKET>; /* prefix + ] */
-            label = "TMUX_PASTE";
-        };
-
         tmux_win_1: tmux_win_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
