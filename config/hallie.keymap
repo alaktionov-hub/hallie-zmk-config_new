@@ -218,6 +218,20 @@
             bindings = <&kp LC(B) &kp N8>;
             label = "TMUX_WIN_8";
         };
+
+        tmux_win_9: tmux_win_9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N9>;
+            label = "TMUX_WIN_9";
+        };
+
+        tmux_win_0: tmux_win_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp N0>;
+            label = "TMUX_WIN_0";
+        };
     };
 
     behaviors {
@@ -255,6 +269,20 @@
             label = "TILDA_GRAVE";
             #binding-cells = <0>;
             bindings = <&kp TILDE>, <&kp GRAVE>;
+        };
+
+        tmux_h_move_left: tmux_h_move_left {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TMUX_H_MOVE_LEFT";
+            #binding-cells = <0>;
+            bindings = <&tmux_left>, <&tmux_split_h>;
+        };
+
+        tmux_past_vertical: tmux_past_vertical {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TMUX_PAST_VERTICAL";
+            #binding-cells = <0>;
+            bindings = <&tmux_paste>, <&tmux_split_v>;
         };
     };
 
@@ -325,10 +353,10 @@
 
         tmux {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &none   &none   &none   &none   &trans  &trans
-&trans  &trans  &none   &none   &none   &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&tmux_kill_pane  &tmux_win_1  &tmux_win_2  &tmux_win_3  &tmux_win_4          &tmux_win_5    &tmux_win_6        &tmux_win_7  &tmux_win_8  &tmux_win_9  &tmux_win_0  &trans
+&trans           &trans       &trans       &trans       &trans               &trans         &tmux_h_move_left  &tmux_down   &tmux_up     &tmux_right  &trans       &trans
+&trans           &trans       &tmux_zoom   &tmux_copy   &tmux_past_vertical  &trans         &trans             &trans       &trans       &trans       &trans       &trans
+                                           &trans       &trans               &trans         &trans             &trans       &trans
             >;
         };
     };
