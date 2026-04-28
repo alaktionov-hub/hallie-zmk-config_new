@@ -232,6 +232,13 @@
             bindings = <&kp LC(B) &kp LEFT_BRACKET>;
             label = "TMUX_COPY";
         };
+
+        tmux_sessions: tmux_sessions {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp LS(S)>;
+            label = "TMUX_SESSIONS";
+        };
     };
 
     behaviors {
@@ -360,10 +367,10 @@
 
         tmux {
             bindings = <
-&tmux_kill_pane  &tmux_win_1  &tmux_win_2  &tmux_win_3  &tmux_4_rename       &tmux_win_5    &tmux_win_6        &tmux_win_7  &tmux_win_8  &tmux_win_9  &tmux_win_0  &trans
-&trans           &trans       &trans       &trans       &trans               &trans         &tmux_h_move_left  &tmux_down   &tmux_up     &tmux_right  &trans       &trans
-&trans           &tmux_zoom   &trans       &tmux_copy   &tmux_past_vertical  &trans         &tmux_new_win      &trans       &trans       &trans       &trans       &trans
-                                           &trans       &trans               &trans         &trans             &trans       &trans
+&tmux_kill_pane  &tmux_win_1  &tmux_win_2     &tmux_win_3  &tmux_4_rename       &tmux_win_5    &tmux_win_6        &tmux_win_7  &tmux_win_8  &tmux_win_9  &tmux_win_0  &trans
+&trans           &trans       &tmux_sessions  &trans       &trans               &trans         &tmux_h_move_left  &tmux_down   &tmux_up     &tmux_right  &trans       &trans
+&trans           &tmux_zoom   &trans          &tmux_copy   &tmux_past_vertical  &trans         &tmux_new_win      &trans       &trans       &trans       &trans       &trans
+                                              &trans       &trans               &trans         &trans             &trans       &trans
             >;
         };
     };
