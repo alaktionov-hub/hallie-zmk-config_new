@@ -226,13 +226,6 @@
             label = "TMUX_PAST";
         };
 
-        tmux_copy: tmux_copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(B) &kp LEFT_BRACKET>;
-            label = "TMUX_COPY";
-        };
-
         tmux_sessions: tmux_sessions {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -252,6 +245,13 @@
             #binding-cells = <0>;
             bindings = <&kp LC(W)>;
             label = "TMUX_C_CLIP";
+        };
+
+        tmux_copy: tmux_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp LEFT_BRACKET>;
+            label = "TMUX_COPY";
         };
     };
 
