@@ -247,11 +247,11 @@
             label = "TMUX_START_COPY";
         };
 
-        tmux_c_clip: tmux_copy {
+        tmux_c_clip: tmux_c_clip {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(W)>;
-            label = "TMUX_COPY";
+            label = "TMUX_C_CLIP";
         };
     };
 
